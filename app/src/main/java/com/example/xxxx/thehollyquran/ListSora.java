@@ -1,0 +1,137 @@
+package com.example.xxxx.thehollyquran;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+/**
+ * Created by amit on 1/5/16.
+ */
+public class ListSora {
+
+    public Sora[] getList() {
+        Sora[] data = new Sora[114];
+            Sora row = new Sora();
+            row.setName("الفاتحة");
+            row.setNumber(1);
+            row.setStatement(true);
+            row.setFirst(1);
+            row.setEnd(1);
+            data[0] = new Sora("الفاتحة",1,1,true);
+            data[1] = new Sora("البقرة",2,2,false);
+            data[2] = new Sora("آل عمران",50,3,false);
+            data[3] = new Sora("النساء",77,4,false);
+            data[4] = new Sora("المائدة",106,5,false);
+            data[5] = new Sora("الأنعام",128,6,true);
+            data[6] = new Sora("الأعراف",151,7,true);
+            data[7] = new Sora("الأنفال",177,8,false);
+            data[8] = new Sora("التوبة",187,9,false);
+            data[9] = new Sora("يونس",208,10,true);
+            data[10] = new Sora("هود",221,11,true);
+            data[11] = new Sora("يوسف",235,12,true);
+            data[12] = new Sora("الرعد",249,13,false);
+            data[13] = new Sora("إبراهيم",255,14,true);
+            data[14] = new Sora("الحجر",262,15,true);
+            data[15] = new Sora("النحل",267,16,true);
+            data[16] = new Sora("الإسراء",282,17,true);
+            data[17] = new Sora("الكهف",293,18,true);
+            data[18] = new Sora("مريم",305,19,true);
+            data[19] = new Sora("طه",312,20,true);
+            data[20] = new Sora("الأنبياء",322,21,true);
+            data[21] = new Sora("الحج",332,22,false);
+            data[22] = new Sora("المؤمنون",342,23,true);
+            data[23] = new Sora("النور",350,24,false);
+            data[24] = new Sora("الفرقان",359,25,true);
+            data[25] = new Sora("الشعراء",367,26,true);
+            data[26] = new Sora("النمل",377,27,true);
+            data[27] = new Sora("القصص",385,28,true);
+            data[28] = new Sora("العنكبوت",396,29,true);
+            data[29] = new Sora("الروم",404,30,true);
+            data[30] = new Sora("لقمان",411,31,true);
+            data[31] = new Sora("السجدة",415,32,true);
+            data[32] = new Sora("الأحزاب",418,33,false);
+            data[33] = new Sora("سبأ",428,34,true);
+            data[34] = new Sora("فاطر",434,35,true);
+            data[35] = new Sora("يس",440,36,true);
+            data[36] = new Sora("الصافات",446,37,true);
+            data[37] = new Sora("ص",453,38,true);
+            data[38] = new Sora("الزمر",458,39,true);
+            data[39] = new Sora("غافر",467,40,true);
+            data[40] = new Sora("فصلت",477,41,true);
+            data[41] = new Sora("الشورى",483,42,true);
+            data[42] = new Sora("الزخرف",489,43,true);
+            data[43] = new Sora("الدخان",496,44,true);
+            data[44] = new Sora("الجاثية",499,45,true);
+            data[45] = new Sora("الأحقاف",502,46,true);
+            data[46] = new Sora("محمد",507,47,false);
+            data[47] = new Sora("الفتح",511,48,false);
+            data[48] = new Sora("الحجرات",515,49,false);
+            data[49] = new Sora("ق",518,50,true);
+            data[50] = new Sora("الذاريات",520,51,true);
+            data[51] = new Sora("الطور",523,52,true);
+            data[52] = new Sora("النجم",526,53,true);
+            data[53] = new Sora("القمر",528,54,true);
+            data[54] = new Sora("الرحمن",531,55,false);
+            data[55] = new Sora("الواقعة",534,56,true);
+            data[56] = new Sora("الحديد",537,57,false);
+            data[57] = new Sora("المجادلة",542,58,false);
+            data[58] = new Sora("الحشر",545,59,false);
+            data[59] = new Sora("الممتحنة",548,60,false);
+            data[60] = new Sora("الصف",551,61,false);
+            data[61] = new Sora("الجمعة",553,62,false);
+            data[62] = new Sora("المنافقون",554,63,false);
+            data[63] = new Sora("التغابن",556,64,false);
+            data[64] = new Sora("الطلاق",558,65,false);
+            data[65] = new Sora("التحريم",560,66,false);
+            data[66] = new Sora("الملك",562,67,true);
+            data[67] = new Sora("القلم",564,68,true);
+            data[68] = new Sora("الحاقة",566,69,true);
+            data[69] = new Sora("المعارج",568,70,true);
+            data[70] = new Sora("نوح",570,71,true);
+            data[71] = new Sora("الجن",572,72,true);
+            data[72] = new Sora("المزمل",574,73,true);
+            data[73] = new Sora("المدثر",575,74,true);
+            data[74] = new Sora("القيامة",577,75,true);
+            data[75] = new Sora("الإنسان",578,76,false);
+            data[76] = new Sora("المرسلات",580,77,true);
+            data[77] = new Sora("النبأ",582,78,true);
+            data[78] = new Sora("النازعات",583,79,true);
+            data[79] = new Sora("عبس",585,80,true);
+            data[80] = new Sora("التكوير",586,81,true);
+            data[81] = new Sora("الانفطار",587,82,true);
+            data[82] = new Sora("المطففين",587,83,true);
+            data[83] = new Sora("الانشقاق",589,84,true);
+            data[84] = new Sora("البروج",590,85,true);
+            data[85] = new Sora("الطارق",591,86,true);
+            data[86] = new Sora("الأعلى",591,87,true);
+            data[87] = new Sora("الغاشية",592,88,true);
+            data[88] = new Sora("الفجر",593,89,true);
+            data[89] = new Sora("البلد",594,90,true);
+            data[90] = new Sora("الشمس",595,91,true);
+            data[91] = new Sora("الليل",595,92,true);
+            data[92] = new Sora("الضحى",596,93,true);
+            data[93] = new Sora("الشرح",596,94,true);
+            data[94] = new Sora("التين",597,95,true);
+            data[95] = new Sora("العلق",597,96,true);
+            data[96] = new Sora("القدر",598,97,true);
+            data[97] = new Sora("البينة",598,98,false);
+            data[98] = new Sora("الزلزلة",599,99,false);
+            data[99] = new Sora("العاديات",599,100,true);
+            data[100] = new Sora("القارعة",600,101,true);
+            data[101] = new Sora("التكاثر",600,102,true);
+            data[102] = new Sora("العصر",601,103,true);
+            data[103] = new Sora("الهمزة",601,104,true);
+            data[104] = new Sora("الفيل",601,105,true);
+            data[105] = new Sora("قريش",602,106,true);
+            data[106] = new Sora("الماعون",602,107,true);
+            data[107] = new Sora("الكوثر",602,108,true);
+            data[108] = new Sora("الكافرون",603,109,true);
+            data[109] = new Sora("النصر",603,110,false);
+            data[110] = new Sora("المسد",603,111,true);
+            data[111] = new Sora("الإخلاص",604,112,true);
+            data[112] = new Sora("الفلق",604,113,true);
+            data[113] = new Sora("الناس",604,114,true);
+
+        return data;
+
+    }
+}
