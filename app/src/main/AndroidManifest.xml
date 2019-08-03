@@ -4,6 +4,8 @@
     package="com.example.xxxx.thehollyquran">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
 
     <application
         android:allowBackup="true"
@@ -24,11 +26,10 @@
         </intent-filter>
 
         </activity>
-            <activity android:name=".IndexOfSora">
-        </activity>
-            <activity android:name=".IndexOfGoz2">
-        </activity>
+            <activity android:name=".IndexOfSora"/>
+            <activity android:name=".IndexOfGoz2"/>
 
+        <receiver android:name=".NotificationReciever"/>
 
     </application>
 

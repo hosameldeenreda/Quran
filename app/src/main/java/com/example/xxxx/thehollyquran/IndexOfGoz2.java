@@ -83,7 +83,6 @@ public class IndexOfGoz2 extends AppCompatActivity {
         int rightRowMargin=0;
         int bottomRowMargin = 0;
         int textSize = 0, smallTextSize =0, mediumTextSize = 0;
-
         textSize = 45;
         smallTextSize = 45;
 

@@ -2,6 +2,8 @@ package com.example.xxxx.thehollyquran;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +32,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.Calendar;
 
 /**
  * Created by Hosam on 10/26/2018.
@@ -37,7 +40,7 @@ import java.io.RandomAccessFile;
 
 public class Quran extends AppCompatActivity {
     ViewPager viewPager;
-    public String fileName="";
+    public String fileName="Quran";
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private Settings settings=new Settings(this) ;
@@ -148,6 +151,17 @@ public class Quran extends AppCompatActivity {
             newString= current.getStringExtra("page");
         }
         viewPager.setCurrentItem(604-Integer.valueOf(newString));
+        Calendar calendar = Calendar.getInstance();
+        //calendar.set(Calendar.DAY_OF_WEEK,Calendar.FRIDAY);
+        calendar.set(Calendar.HOUR_OF_DAY,3);
+        calendar.set(Calendar.MINUTE,3);
+        calendar.set(Calendar.SECOND,5);
+
+        Intent intent = new Intent(getApplicationContext(),NotificationReciever.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(),100,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),alarmManager.INTERVAL_DAY*7,pendingIntent);
+
     }
     public void goToindexOfSora() {
         Intent intent=new Intent(this,IndexOfSora.class);
