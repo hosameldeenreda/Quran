@@ -1,4 +1,4 @@
-package com.example.xxxx.thehollyquran;
+package com.example.Quran.thehollyquran;
 
 /**
  * Created by Hosam on 10/22/2018.

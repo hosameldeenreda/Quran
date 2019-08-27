@@ -1,6 +1,5 @@
-package com.example.xxxx.thehollyquran;
+package com.example.Quran.thehollyquran;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**

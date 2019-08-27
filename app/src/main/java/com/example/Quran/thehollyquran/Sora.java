@@ -1,4 +1,4 @@
-package com.example.xxxx.thehollyquran;
+package com.example.Quran.thehollyquran;
 
 /**
  * Created by Hosam on 10/15/2018.
@@ -11,13 +11,6 @@ public class Sora {
     private int number;
     private boolean statement;//مكية=1    مدنية=0
 
-    /*public Sora(String name, int first, int end, int number, boolean statement) {
-        this.name = name;
-        this.first = first;
-        this.end = end;
-        this.number = number;
-        this.statement = statement;
-    }*/
     public Sora(String name, int first, int number, boolean statement) {
         this.name = name;
         this.first = first;

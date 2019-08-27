@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.xxxx.thehollyquran">
+    package="com.example.Quran.thehollyquran">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,22 +15,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-
-        >
+        android:largeHeap="true">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4089508720843264~3295942138"/>
 
         <activity android:name=".Quran"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait"
             >
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
 
         </activity>
-            <activity android:name=".IndexOfSora"/>
-            <activity android:name=".IndexOfGoz2"/>
+            <activity android:name=".IndexOfSora"
+                android:screenOrientation="portrait"
+                />
+            <activity android:name=".IndexOfGoz2"
+                android:screenOrientation="portrait"
+                />
 
-        <receiver android:name=".NotificationReciever"/>
+        <receiver
+            android:name=".NotificationReciever"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
 
     </application>
 

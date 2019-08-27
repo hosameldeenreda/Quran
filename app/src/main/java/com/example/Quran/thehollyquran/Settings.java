@@ -1,4 +1,4 @@
-package com.example.xxxx.thehollyquran;
+package com.example.Quran.thehollyquran;
 
 import android.content.Context;
 import android.content.Intent;

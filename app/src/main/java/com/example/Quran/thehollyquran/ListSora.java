@@ -1,7 +1,4 @@
-package com.example.xxxx.thehollyquran;
-
-import java.text.NumberFormat;
-import java.util.Locale;
+package com.example.Quran.thehollyquran;
 
 /**
  * Created by amit on 1/5/16.
@@ -75,7 +72,7 @@ public class ListSora {
             data[56] = new Sora("الحديد",537,57,false);
             data[57] = new Sora("المجادلة",542,58,false);
             data[58] = new Sora("الحشر",545,59,false);
-            data[59] = new Sora("الممتحنة",548,60,false);
+            data[59] = new Sora("الممتحنة",549,60,false);
             data[60] = new Sora("الصف",551,61,false);
             data[61] = new Sora("الجمعة",553,62,false);
             data[62] = new Sora("المنافقون",554,63,false);
